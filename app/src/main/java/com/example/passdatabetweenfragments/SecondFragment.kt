@@ -25,9 +25,12 @@ class SecondFragment : Fragment() {
         val view = binding?.root
         return view
     }
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.test2?.text = myPassedArgs.myArg.toString()
+//        binding?.test2?.text = myPassedArgs.myArg.toString()
+
+        binding?.test2?.text = arguments?.getInt("myValue2").toString()
+
     }
 }
